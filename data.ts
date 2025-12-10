@@ -26,6 +26,11 @@ export const curriculumData: Section[] = [
              imageType: "classic-grid-4",
              year: "2023 国考",
              analysis: "题干中黑块沿顺时针外圈移动，每次移动1格，选择下一个位置。"
+          },
+          {
+             imageType: "pos-trans",
+             year: "2022 省考",
+             analysis: "小图形在十六宫格内先向右移动2格，到头后折返，步数不变。"
           }
         ]
       },
@@ -40,6 +45,13 @@ export const curriculumData: Section[] = [
         examples: [
           { type: "pos-rot", label: "旋转", description: "时针方向旋转" },
           { type: "classic-sym-overall", label: "翻转/对称", description: "轴对称翻转" }
+        ],
+        realQuestions: [
+           {
+             imageType: "pos-rot",
+             year: "2021 国考",
+             analysis: "图形整体顺时针旋转90度，且内部小元素位置保持相对不变。"
+           }
         ]
       },
       {
@@ -115,6 +127,9 @@ export const curriculumData: Section[] = [
         examples: [
             { type: "classic-protrusion-cross", label: "十字出头", description: "交点/笔画" },
             { type: "classic-protrusion-through", label: "圆贯穿", description: "圆内特征" }
+        ],
+        realQuestions: [
+            { imageType: "classic-protrusion-cross", year: "2020 国考", analysis: "所有图形均为一笔画，注意出头部分不影响笔画数的判定。" }
         ]
       },
       {
@@ -134,6 +149,9 @@ export const curriculumData: Section[] = [
         examples: [
             { type: "faces-enclosed", label: "多面", description: "数面数量" },
             { type: "faces-divided", label: "同构面", description: "形状相似" }
+        ],
+        realQuestions: [
+            { imageType: "faces-divided", year: "2019 江苏", analysis: "每个图形都被分割成3个面积相等、形状相同的三角形（同构面）。" }
         ]
       },
       {
@@ -156,6 +174,9 @@ export const curriculumData: Section[] = [
         examples: [
             { type: "pos-connect", label: "点连接", description: "关键点连接" },
             { type: "classic-intersecting-circles", label: "相交", description: "公共区域" }
+        ],
+        realQuestions: [
+            { imageType: "pos-connect", year: "2021 联考", analysis: "图形之间仅通过一个点连接，且连接点位置依次顺时针移动。" }
         ]
       },
       {
@@ -226,6 +247,9 @@ export const curriculumData: Section[] = [
         examples: [
             { type: "classic-char-cn", label: "汉字", description: "结构/笔画" },
             { type: "classic-char-en", label: "字母", description: "曲直/开口" }
+        ],
+        realQuestions: [
+            { imageType: "classic-char-cn", year: "2020 省考", analysis: "所给汉字均为左右结构，且左边部分笔画数依次增加。" }
         ]
       },
       {
@@ -264,6 +288,9 @@ export const curriculumData: Section[] = [
         examples: [
             { type: "classic-fix-double-circle", label: "双圆", description: "一笔画特征" },
             { type: "classic-fix-tian", label: "田字", description: "两笔画" }
+        ],
+        realQuestions: [
+            { imageType: "classic-fix-tian", year: "2018 国考", analysis: "所有图形均可一笔画成（虽然有田字变形，但注意奇点数）。本题考点为修正后的笔画数。" }
         ]
       },
       {
@@ -324,6 +351,9 @@ export const curriculumData: Section[] = [
         ],
         examples: [
           { type: "faces-enclosed", label: "封闭空间", description: "数窟窿个数" }
+        ],
+        realQuestions: [
+            { imageType: "faces-enclosed", year: "2021 国考", analysis: "图形面的数量依次为2, 3, 4, 5, 6，呈等差数列。" }
         ]
       },
       {
@@ -347,6 +377,9 @@ export const curriculumData: Section[] = [
         ],
         examples: [
           { type: "max-face-feature", label: "最大面特征", description: "关注最大区域的属性" }
+        ],
+        realQuestions: [
+            { imageType: "max-face-feature", year: "2020 联考", analysis: "每个图形的最大面均为中心对称图形。" }
         ]
       }
     ]
@@ -380,6 +413,9 @@ export const curriculumData: Section[] = [
         examples: [
           { type: "one-stroke-star", label: "一笔画", description: "五角星(0奇点)" },
           { type: "ri", label: "日字", description: "日字(2奇点)" }
+        ],
+        realQuestions: [
+            { imageType: "one-stroke-star", year: "2022 国考", analysis: "五角星是典型的0奇点图形，可一笔画成。题干所有图形均为一笔画。" }
         ]
       },
       {
@@ -392,6 +428,9 @@ export const curriculumData: Section[] = [
         examples: [
           { type: "tian", label: "田字", description: "4奇点 = 2笔画" },
           { type: "multi-part", label: "多部分", description: "不连通图形" }
+        ],
+        realQuestions: [
+            { imageType: "tian", year: "2021 省考", analysis: "图形奇点数均为4，最少笔画数为2。" }
         ]
       }
     ]
@@ -412,6 +451,9 @@ export const curriculumData: Section[] = [
         ],
         examples: [
           { type: "cross-lines", label: "线条交叉", description: "明显交叉点" }
+        ],
+        realQuestions: [
+            { imageType: "cross-lines", year: "2019 国考", analysis: "图形中直线与直线的交点数量依次递增 2, 3, 4, 5。" }
         ]
       },
       {
@@ -512,6 +554,9 @@ export const curriculumData: Section[] = [
         ],
         examples: [
           { type: "right-angle", label: "直角", description: "明显的垂直关系" }
+        ],
+        realQuestions: [
+            { imageType: "right-angle", year: "2020 省考", analysis: "每幅图直角数量均为2个。" }
         ]
       },
       {
@@ -551,6 +596,9 @@ export const curriculumData: Section[] = [
         ],
         examples: [
           { type: "multi-part", label: "离散图形", description: "数部分数" }
+        ],
+        realQuestions: [
+            { imageType: "multi-part", year: "2018 联考", analysis: "图形部分数依次为1, 2, 3, 4。" }
         ]
       }
     ]
